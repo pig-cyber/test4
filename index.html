@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF1スタイル バトルシステム</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>⚔️ FF1スタイル バトルシステム ⚔️</h1>
+        
+        <div class="battle-field">
+            <div class="party" id="party">
+                </div>
+            <div class="enemies" id="enemies">
+                </div>
+        </div>
+
+        <div class="message-box" id="messageBox"></div>
+
+        <div class="command-menu" id="commandMenu">
+            <button class="command-btn" onclick="selectCommand('attack')">たたかう</button>
+            <button class="command-btn" onclick="selectCommand('magic')">まほう</button>
+            <button class="command-btn" onclick="selectCommand('item')">アイテム</button>
+            <button class="command-btn" onclick="selectCommand('defend')">ぼうぎょ</button>
+        </div>
+
+        <div class="target-selection" id="targetSelection">
+            </div>
+
+        <div class="character-selection" id="characterSelection">
+            <h2>次に戦う仲間を選んでください</h2>
+        </div>
+        
+        <div class="enemy-selection" id="enemySelection">
+            <h2>次に戦う敵を選んでください</h2>
+            <p>※キャラクター名と合言葉が一致している必要があります。</p>
+            <input type="text" id="enemyPassword" placeholder="合言葉を入力してください">
+            <div id="enemyButtons"></div>
+        </div>
+
+        <div id="gameOverScreen" style="display: none;">
+            <button class="restart-btn" onclick="restartGame()">もう一度戦う</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
